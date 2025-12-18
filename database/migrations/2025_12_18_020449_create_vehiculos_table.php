@@ -16,9 +16,7 @@ return new class extends Migration
             $table->string('placa', 10);
             $table->string('tipo', 12);
             $table->string('propietario', 100)->nullable();
-            $table->string('observacion', 250)->nullable();
-
-            $table->dateTime('entrada');
+            $table->text('observaciones')->nullable();
 
             $table->boolean('salio')->default(false);
 

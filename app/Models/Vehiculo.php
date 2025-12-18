@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Model;
-
 class Vehiculo extends Model
 {
     protected $table = 'vehiculos';
@@ -11,23 +8,26 @@ class Vehiculo extends Model
         'placa',
         'tipo',
         'propietario',
-        'observacion',
-        'salio'
+        'observacion'
     ];
     static public function getVehiculos()
     {
         return self::all();
     }
-    static public function getVehiculoByID($id)
+    static public function getVehiculosById($id)
     {
         return self::find($id);
     }
-    static public function createVehiculo(Request $request)
+    public static function createVehiculo(array $data)
     {
-        return self::create($request->all());
+        return self::create($data);
     }
-    static public function updateVehiculo(Request $request)
+    public function updateVehiculo(array $data)
     {
-        return self::update($request->all());
+        return $this->update($data);
+    }
+    static public function deleteVehiculo(Vehiculo $vehiculo)
+    {
+        $vehiculo->delete();
     }
 }

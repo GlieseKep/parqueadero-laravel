@@ -54,19 +54,22 @@ class VehiculoController extends Controller
     {
         $request->validate([
             'placa' => 'required | max:10',
-            'tipo' => 'required'
+            'tipo' => 'required',
+            'propietario',
+            'observacion' => 'max:250'
         ]);
         $vehiculo->updateVehiculo($request->all());
 
         return redirect()->route('vehiculos.index')
             ->with('success', 'Vehiculo actualizado.');
     }
-
     /**
-     * Display the specified resource.
+     * Delete the specified resource in storage.
      */
-    public function show(Vehiculo $vehiculo)
+    public function destroy(Vehiculo $vehiculo)
     {
-        //
+        Vehiculo::deleteVehiculo($vehiculo);
+        return redirect()->route('vehiculos.index')
+            ->with('success', 'Vehículo eliminado.');
     }
 }
