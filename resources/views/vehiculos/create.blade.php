@@ -5,7 +5,7 @@
 <h1>Registrar Vehículo</h1>
 <form action="{{ route('vehiculo.store') }}" method="POST">
     @csrf
-    <div class="md-3">
+    <div class="mb-3">
         <label class="form-label">
             Placa *</label>
         <input type="text" name="placa" class="form-control" required>
