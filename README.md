@@ -66,20 +66,6 @@
 <h2>3. Eliminación de Registros</h2>
 
 <p>
-Sí es posible eliminar registros bajo ciertas condiciones:
+Sí, ya que si hipotéticamente se llega a registrar un vehículo que nunca entro se debería de poder borrarlo del registro para que no haya inconsistencia de información. Pero no se debería de borrar si el vehículo ya salio, por lo que se le agregó a la tabla un campo para identificar si ya salio o no.
 </p>
 
-<ul>
-  <li>
-    Si se registra un vehículo que nunca ingresó al parqueadero,
-    el registro puede eliminarse para evitar inconsistencias de información.
-  </li>
-  <li>
-    No se debe eliminar un vehículo que ya haya salido del parqueadero.
-  </li>
-  <li>
-    Para controlar este comportamiento, se incluye el campo
-    <code>salio</code> en la tabla, el cual permite identificar
-    si el vehículo ya salió o no.
-  </li>
-</ul>
