@@ -29,7 +29,7 @@
         <textarea name="observacion" class="form-control" rows="3">{{ $vehiculo->observacion }}</textarea>
     </div>
 
-    <div>
+    <div class="mb-3">
         <select name="salio" class="form-select" required>
             <option value="0" {{ $vehiculo->salio == '0' ? 'selected' : '' }}>Aun no sale</option>
             <option value="1" {{ $vehiculo->salio == '1' ? 'selected' : '' }}>Ya salio</option>

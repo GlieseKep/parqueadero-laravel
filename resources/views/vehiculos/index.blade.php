@@ -15,6 +15,7 @@
                 <th>Propietario</th>
                 <th>Observaciones</th>
                 <th>Entrada</th>
+                <th>Estado</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -26,6 +27,11 @@
                     <td>{{ $vehiculo->propietario}}</td>
                     <td>{{ $vehiculo->observacion}}</td>
                     <td>{{ $vehiculo->created_at->format('d/m/Y H:i') }}</td>
+                    @if( $vehiculo->salio == 0)
+                        <td>No ha salido</td>
+                    @else
+                        <td>Ya salido</td>
+                    @endif
                     <td>
                         <a href="{{ route('vehiculos.edit', $vehiculo) }}" class="btn btn-sm btn-warning">
                             Editar</a>

@@ -8,7 +8,8 @@ class Vehiculo extends Model
         'placa',
         'tipo',
         'propietario',
-        'observacion'
+        'observacion',
+        'salio'
     ];
     static public function getVehiculos()
     {
