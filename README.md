@@ -41,8 +41,8 @@
       <td>No</td>
     </tr>
     <tr>
-      <td><code>salio</code></td>
-      <td>boolean</td>
+      <td><code>estado</code></td>
+      <td>string</td>
       <td>No</td>
     </tr>
     <tr>
